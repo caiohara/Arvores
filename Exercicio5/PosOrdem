@@ -1,0 +1,15 @@
+package Atividade5;
+
+class No {
+    int valor;
+    No esquerda, direita;
+}
+
+public class PosOrdem {
+    public static void posOrdem(No node) {
+        if (node == null) return;
+        posOrdem(node.esquerda);
+        posOrdem(node.direita);
+        System.out.print(node.valor + " ");
+    }
+}
